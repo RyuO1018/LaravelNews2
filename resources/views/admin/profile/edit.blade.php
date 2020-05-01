@@ -8,10 +8,7 @@
         <title>MyProfileEdit</title>
     </head>
     <body>
-        @guest
-            <form method="POST" action="{{ route('login') }}">@csfr</form>
-        @endguest
-        
+
         <h1>Myプロフィール編集画面</h1>
     </body>
 </html>

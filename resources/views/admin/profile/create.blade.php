@@ -8,10 +8,7 @@
         <title>MyProfile</title>
     </head>
     <body>
-        @guest
-            <form method="POST" action="{{ route('login') }}">@csfr</form>
-        @endguest
-        
+
         {{-- layouts/admin.blade.phpを読み込む --}}
         @extends('layouts.admin')
 
