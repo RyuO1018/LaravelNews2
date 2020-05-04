@@ -31,24 +31,24 @@
                                 </ul>
                             @endif
                             <div class="form-group row">
-                                <label class="col-md-2">氏名</label>
+                                <label class="col-md-2" for="name">氏名</label>
                                 <div class="col-md-10">
                                     <input type="text" clas="form-control" name="name" value="{{ old('title') }}">
                                 </div>
                             </div>
-                            <div class="form-group row">
+                            <div class="form-group row" for="gender">
                                 <label class="col-md-2">性別</label>
                                 <div class="col-md-10">
                                     <textarea class="form" name="gender">{{ old('body') }}</textarea>
                                 </div>
                             </div>
-                            <div class="form-group row">
+                            <div class="form-group row" for="hobby">
                                 <label class="col-md-2">趣味</label>
                                 <div class="col-md-10">
                                     <textarea class="form" name="hobby" rows="5">{{ old('body') }}</textarea>
                                 </div>
                             </div>
-                            <div class="form-group row">
+                            <div class="form-group row" for="introduction">
                                 <label class="col-md-2">自己紹介</label>
                                 <div class="col-md-10">
                                     <textarea class="form" name="introduction" rows="20">{{ old('body') }}</textarea>
