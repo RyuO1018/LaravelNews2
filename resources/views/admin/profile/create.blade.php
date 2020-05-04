@@ -43,12 +43,18 @@
                                 </div>
                             </div>
                             <div class="form-group row">
+                                <label class="col-md-2">趣味</label>
+                                <div class="col-md-10">
+                                    <textarea class="form" name="hobby" rows="5">{{ old('body') }}</textarea>
+                                </div>
+                            </div>
+                            <div class="form-group row">
                                 <label class="col-md-2">自己紹介</label>
                                 <div class="col-md-10">
                                     <textarea class="form" name="introduction" rows="20">{{ old('body') }}</textarea>
                                 </div>
                             </div>
-                            {{ csfr_field() }}
+                            {{ csrf_field() }}
                             <input type="submit" class="btn btn-primary" value="更新">
                         </form>
                     </div>
