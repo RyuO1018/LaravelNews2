@@ -6,6 +6,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\News; //News Modelを使えるようにする
+use App\History; //HistoryModelを使えるようにする
+
+use Carbon\Carbon; //Carbonを使えるようにする
 
 class NewsController extends Controller
 {
@@ -87,6 +90,12 @@ class NewsController extends Controller
         unset($news_form['_token']);
         //該当するデータを上書きして保存する
         $news->fill($news_form)->save();
+        
+        //Historyへのデータ追加
+        $history = new History;
+        $history->news_id = $news->id;
+        $history->edited_at = Carbon::now();
+        $history->save();
         
         return redirect('admin/news');
     }
