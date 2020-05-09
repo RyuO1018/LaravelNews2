@@ -35,3 +35,5 @@ Route::post('admin/profile/edit', 'Admin\ProfileController@update')->middleware(
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/', 'NewsController@index');
